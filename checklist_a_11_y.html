@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Checklist Accessibilité (a11y)</title>
+  <meta name="description" content="Checklist simple et enrichissable pour vérifier l'accessibilité lors du développement d'une page web.">
+  <style>
+    :root{--bg:#f7f8fb;--card:#ffffff;--accent:#005fcc;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;margin:0;background:var(--bg);color:#0f172a}
+    header{background:linear-gradient(90deg,var(--accent),#0b6fb9);color:rgb(0, 122, 236);padding:1.5rem}
+    .container{max-width:960px;margin:1rem auto;padding:1rem}
+    .card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin-bottom:1rem}
+    h1,h2,h3,h4{margin-top:.25rem}
+    p.lead{color:var(--muted);margin-top:0}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+    ul.checklist{list-style:none;padding:0;margin:0}
+    li.item{padding:.6rem;border-bottom:1px solid #eef2f7;display:flex;align-items:flex-start;gap:.75rem}
+    label{display:flex;align-items:flex-start;gap:.5rem}
+    input[type=checkbox]{width:20px;height:20px;margin-top:4px}
+    .hint{color:var(--muted);font-size:.9rem}
+    .controls{display:flex;gap:.5rem;flex-wrap:wrap}
+    button{background:var(--accent);color:white;border:0;padding:.5rem .75rem;border-radius:8px;cursor:pointer}
+    button.secondary{background:#eef2ff;color:var(--accent)}
+    a.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    a.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.5rem .75rem;background:#fff;border-radius:6px;box-shadow:0 4px 8px rgba(2,6,23,.2)}
+    footer{font-size:.85rem;color:var(--muted);text-align:center;padding:1rem}
+    .note{background:#fff7ed;border-left:4px solid #f59e0b;padding:.6rem;border-radius:6px;margin-bottom:1rem}
+    table{width:100%;border-collapse:collapse;margin-top:.5rem}
+    th,td{border:1px solid #e2e8f0;padding:.5rem .75rem;text-align:left}
+    thead{background:#f1f5f9}
+    caption{text-align:left;margin-bottom:.5rem;font-size:.9rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Passer au contenu principal</a>
+  <header role="banner" class="card">
+    <div class="container">
+      <h1>Checklist Accessibilité (a11y)</h1>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="card" aria-labelledby="base-title">
+      <h2 id="base-title">Checklist de base</h2>
+      <p class="hint">À vérifier absolument pour chaque nouvelle page.</p>
+      <ul class="checklist" id="checklist-base">
+        <li class="item"><label><input type="checkbox" data-key="lang"><div><strong>Langue de la page</strong><div class="hint">Attribut <code>lang</code> correct sur &lt;html&gt;.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="titles"><div><strong>Structure de titres</strong><div class="hint">Un seul H1, titres hiérarchisés.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="links"><div><strong>Liens explicites</strong><div class="hint">Texte de lien compréhensible.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="alt"><div><strong>Images avec alt</strong><div class="hint">Texte alternatif pertinent ou alt="" si décoratif.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="contrast"><div><strong>Contraste suffisant</strong><div class="hint">Vérifier contraste texte/fond (AA).</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="keyboard"><div><strong>Navigation clavier</strong><div class="hint">Tab, Shift+Tab, focus visible.</div></div></label></li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="extra-title">
+      <h2 id="extra-title">Aller plus loin</h2>
+      <div class="note">Ces parties sont optionnelles. Servez-vous en si vous voulez approfondir (inspiré par Intopia Not‑Checklist, Vox Media, Design Accessible).</div>
+
+      <h3>Design & contenu</h3>
+      <ul class="checklist">
+        <li class="item"><label><input type="checkbox" data-key="color"><div><strong>Pas d’information uniquement par couleur</strong></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="touch"><div><strong>Cibles tactiles suffisantes</strong><div class="hint">44×44 px recommandé.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="animation"><div><strong>Animations contrôlables</strong><div class="hint">Pause / stop possible, pas de clignotement excessif.</div></div></label></li>
+      </ul>
+
+      <h3>Développement</h3>
+      <ul class="checklist">
+        <li class="item"><label><input type="checkbox" data-key="semantic"><div><strong>Balises sémantiques</strong><div class="hint">Ne pas utiliser div/span pour simuler un bouton.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="aria"><div><strong>ARIA pertinent</strong><div class="hint">Uniquement si nécessaire, bien testé.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="focus"><div><strong>Gestion du focus</strong><div class="hint">Focus piégé évité, retour après modals.</div></div></label></li>
+      </ul>
+
+      <h3>Formulaires</h3>
+      <ul class="checklist">
+        <li class="item"><label><input type="checkbox" data-key="labels"><div><strong>Labels explicites</strong><div class="hint">Placeholder ≠ label.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="errors"><div><strong>Messages d’erreurs utiles</strong><div class="hint">Clairs, associés au champ.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="mandatory"><div><strong>Champs obligatoires indiqués</strong></div></label></li>
+      </ul>
+
+      <h3>Tests & QA</h3>
+      <ul class="checklist">
+        <li class="item"><label><input type="checkbox" data-key="axe"><div><strong>Tests automatisés</strong><div class="hint">axe, Lighthouse, WAVE.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="sr"><div><strong>Tests lecteurs d’écran</strong><div class="hint">NVDA, VoiceOver.</div></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="mobile"><div><strong>Tests multi‑devices</strong><div class="hint">Mobile, tablette, desktop.</div></div></label></li>
+      </ul>
+
+      <h3>Anti‑checklist (ne pas faire)</h3>
+      <ul class="checklist">
+        <li class="item"><label><input type="checkbox" data-key="nofocus"><div><strong>Ne pas supprimer le focus visible</strong></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="noclick"><div><strong>Ne pas utiliser div/span cliquables sans rôle</strong></div></label></li>
+        <li class="item"><label><input type="checkbox" data-key="nocolor"><div><strong>Ne pas dépendre de la couleur seule</strong></div></label></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Ressources</h2>
+      <ul>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter">Accessibility Linting</a></li>
+        <li><a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 — W3C</a></li>
+        <li><a href="https://www.w3.org/WAI/">WAI — Web Accessibility Initiative</a></li>
+        <li><a href="https://www.a11yproject.com/checklist/">The A11Y Project</a></li>
+        <li><a href="https://not-checklist.intopia.digital/">Not‑Checklist — Intopia</a></li>
+        <li><a href="https://accessibility.voxmedia.com/">Vox Media Accessibility Guidelines</a></li>
+        <li><a href="https://design-accessible.fr/checklist">Checklist Design Accessible</a></li>
+        <li><a href="https://wave.webaim.org/">WAVE en ligne</a></li>
+        <li><a href="https://webaim.org/projects/million/">The 2025 report on the accessibility of the top 1,000,000 home pages</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">© Checklist a11y — fichier simple mais extensible. Inspiré de WCAG, Intopia, Vox Media, Design Accessible.</div>
+  </footer>
+
+</body>
+</html>
