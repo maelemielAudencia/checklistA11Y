@@ -134,7 +134,31 @@
                 },
                 "rgaa": "8.3",
                 "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.3",
-                "tools": []
+                "tools": [
+                    {
+                        "name": "axe Linter",
+                        "url": "https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter/"
+                    }
+                ]
+            },
+            {
+                "key": "title",
+                "label": "Titre de la page",
+                "hint": "Chaque page doit avoir un titre unique et descriptif.",
+                "wcag": [
+                    "2.4.2"
+                ],
+                "wcagUrl": {
+                    "2.4.2": "https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html"
+                },
+                "rgaa": "8.5",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.5",
+                "tools": [
+                    {
+                        "name": "axe Linter",
+                        "url": "https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter/"
+                    }
+                ]
             }
         ]
     }
