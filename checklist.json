@@ -137,7 +137,7 @@
                 "tools": [
                     {
                         "name": "axe Linter",
-                        "url": "https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter/"
+                        "url": "https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter"
                     }
                 ]
             },
@@ -156,7 +156,7 @@
                 "tools": [
                     {
                         "name": "axe Linter",
-                        "url": "https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter/"
+                        "url": "https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter"
                     }
                 ]
             }
