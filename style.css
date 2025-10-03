@@ -1,0 +1,273 @@
+/* Case à cocher personnalisée pour checklist */
+.checklist-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.checklist-checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+.checklist-checkbox svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checklist-checkbox .cb-bg {
+    stroke: var(--checked-state-bg-color, #005fcc);
+    fill: #fff;
+    transition: stroke 0.2s;
+}
+
+.checklist-checkbox input[type="checkbox"]:checked+svg .cb-bg {
+    stroke: var(--checked-state-bg-color, #005fcc);
+    fill: var(--checked-state-bg-color, #005fcc);
+}
+
+.checklist-checkbox .cb-cm {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.checklist-checkbox input[type="checkbox"]:checked+svg .cb-cm {
+    opacity: 1;
+}
+
+.checkbox-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.inline {
+    color: var(--code-text-color, #005fcc);
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-lato {
+    font-family: Lato, Arial, sans-serif;
+}
+
+.rounded-md {
+    border-radius: 6px;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.bg-nc-orange-variant-1 {
+    background: #FFF3E0;
+}
+
+.text-nc-orange-variant-6 {
+    color: #BB3200;
+}
+
+:root {
+    --bg: #f7f8fb;
+    --card: #ffffff;
+    --accent: #005fcc;
+    --muted: #6b7280;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    background: var(--bg);
+    color: #0f172a;
+}
+
+header {
+    background: linear-gradient(90deg, var(--accent), #0b6fb9);
+    color: rgb(0, 122, 236);
+    padding: 1.5rem;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.card {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: .25rem;
+}
+
+p.lead {
+    color: var(--muted);
+    margin-top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 1rem;
+}
+
+@media (max-width:880px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+ul.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.item {
+    padding: .6rem;
+    border-bottom: 1px solid #eef2f7;
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    justify-content: space-between;
+}
+
+.tools {
+    min-width: 200px;
+    font-size: .9rem;
+    color: var(--muted);
+    text-align: right;
+}
+
+label {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+}
+
+.hint {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.controls {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: 0;
+    padding: .5rem .75rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.secondary {
+    background: #eef2ff;
+    color: var(--accent);
+}
+
+a.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+a.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: .5rem .75rem;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(2, 6, 23, .2);
+}
+
+footer {
+    font-size: .85rem;
+    color: var(--muted);
+    text-align: center;
+    padding: 1rem;
+}
+
+.note {
+    background: #fff7ed;
+    border-left: 4px solid #f59e0b;
+    padding: .6rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: .5rem;
+}
+
+th,
+td {
+    border: 1px solid #e2e8f0;
+    padding: .5rem .75rem;
+    text-align: left;
+}
+
+thead {
+    background: #f1f5f9;
+}
+
+caption {
+    text-align: left;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    color: var(--muted);
+}

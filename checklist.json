@@ -1,0 +1,141 @@
+[
+    {
+        "section": "Design & contenu",
+        "criteria": [
+            {
+                "key": "alt",
+                "label": "Images avec attribut alt pertinent",
+                "hint": "Chaque image doit avoir un attribut alt descriptif ou alt=\"\" si décorative.",
+                "wcag": [
+                    "1.1.1"
+                ],
+                "wcagUrl": {
+                    "1.1.1": "https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
+                },
+                "rgaa": "1.1",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#1.1",
+                "tools": [
+                    {
+                        "name": "WAVE",
+                        "url": "https://wave.webaim.org/"
+                    },
+                    {
+                        "name": "axe DevTools",
+                        "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
+                    }
+                ]
+            },
+            {
+                "key": "label",
+                "label": "Champs de formulaire avec label explicite",
+                "hint": "Chaque champ doit être associé à un label visible et pertinent.",
+                "wcag": [
+                    "3.3.2"
+                ],
+                "wcagUrl": {
+                    "3.3.2": "https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html"
+                },
+                "rgaa": "11.1",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.1",
+                "tools": [
+                    {
+                        "name": "axe DevTools",
+                        "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
+                    }
+                ]
+            },
+            {
+                "key": "linktext",
+                "label": "Liens avec texte explicite et non vide",
+                "hint": "Chaque lien doit avoir un texte visible et compréhensible.",
+                "wcag": [
+                    "2.4.4"
+                ],
+                "wcagUrl": {
+                    "2.4.4": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html"
+                },
+                "rgaa": "6.1",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#6.1",
+                "tools": [
+                    {
+                        "name": "axe DevTools",
+                        "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
+                    }
+                ]
+            },
+            {
+                "key": "color",
+                "label": "Pas d’information uniquement par couleur",
+                "hint": "Eviter d'utiliser la couleur seule pour transmettre une information.",
+                "wcag": [
+                    "1.4.1"
+                ],
+                "wcagUrl": {
+                    "1.4.1": "https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html"
+                },
+                "rgaa": "3.1",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#3.1",
+                "tools": [
+                    {
+                        "name": "Color Contrast Analyzer",
+                        "url": "https://www.tpgi.com/color-contrast-checker/"
+                    },
+                    {
+                        "name": "WAVE",
+                        "url": "https://wave.webaim.org/"
+                    },
+                    {
+                        "name": "axe DevTools",
+                        "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
+                    }
+                ]
+            },
+            {
+                "key": "contrast",
+                "label": "Contraste suffisant",
+                "hint": "Vérifier contraste texte/fond (AA).",
+                "wcag": [
+                    "1.4.3"
+                ],
+                "wcagUrl": {
+                    "1.4.3": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"
+                },
+                "rgaa": "3.2",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#3.2",
+                "tools": [
+                    {
+                        "name": "Color Contrast Analyzer",
+                        "url": "https://www.tpgi.com/color-contrast-checker/"
+                    },
+                    {
+                        "name": "WAVE",
+                        "url": "https://wave.webaim.org/"
+                    },
+                    {
+                        "name": "axe DevTools",
+                        "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "Développement",
+        "criteria": [
+            {
+                "key": "lang",
+                "label": "Langue de la page",
+                "hint": "Attribut <code>&lt;lang&gt;</code> correct dans le <code>&lt;html&gt;</code>.",
+                "wcag": [
+                    "3.1.1"
+                ],
+                "wcagUrl": {
+                    "3.1.1": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html"
+                },
+                "rgaa": "8.3",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.3",
+                "tools": []
+            }
+        ]
+    }
+]
