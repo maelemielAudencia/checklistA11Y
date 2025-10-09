@@ -22,6 +22,10 @@
                     {
                         "name": "axe DevTools",
                         "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
+                    },
+                    {
+                        "name": "Firefox Accessibility Inspector",
+                        "url": "https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector"
                     }
                 ]
             },
@@ -65,7 +69,7 @@
             },
             {
                 "key": "color",
-                "label": "Pas d’information uniquement par couleur",
+                "label": "Pas d'information uniquement par couleur",
                 "hint": "Eviter d'utiliser la couleur seule pour transmettre une information.",
                 "wcag": [
                     "1.4.1"
