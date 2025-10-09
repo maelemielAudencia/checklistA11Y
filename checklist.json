@@ -180,9 +180,9 @@
                 "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#5.7"
             },
             {
-                "key": "link purpose (in context)",
-                "label": "Liens avec texte explicite et non vide",
-                "hint": "Chaque lien doit avoir un texte visible et compréhensible.",
+                "key": "Relevance of the title (link)",
+                "label": "Pertinence du libellé (lien)",
+                "hint": "le libellé doit être explicite et compréhensible (seul ou avec son contexte).",
                 "wcag": [
                     "1.1.1",
                     "2.4.4",
@@ -195,6 +195,21 @@
                 },
                 "rgaa": "6.1",
                 "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#6.1"
+            },
+            {
+                "key": "Presence of a title (link)",
+                "label": "Présence d'un libellé (lien)",
+                "hint": "le lien doit avoir un libellé accessible (ne pas être vide)",
+                "wcag": [
+                    "1.1.1",
+                    "2.4.4"
+                ],
+                "wcagUrl": {
+                    "1.1.1": "https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html",
+                    "2.4.4": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html"
+                },
+                "rgaa": "6.2",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#6.2"
             }
         ]
     },
