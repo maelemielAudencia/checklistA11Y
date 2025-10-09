@@ -122,6 +122,23 @@
                 ]
             },
             {
+                "key": "(Prerecorded) Audio-only and Video-only ; audio description or media alternative for video",
+                "label": "Médias audio et vidéo",
+                "hint": "Fournir des alternatives textuelles pour les contenus audio et vidéo préenregistrés.",
+                "wcag": [
+                    "1.2.1",
+                    "1.2.3",
+                    "1.2.5"
+                ],
+                "wcagUrl": {
+                    "1.2.1": "https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html",
+                    "1.2.3": "https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html",
+                    "1.2.5": "https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html"
+                },
+                "rgaa": "4.1",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#4.1"
+            },
+            {
                 "key": "audio control",
                 "label": "Contrôle des médias audio",
                 "hint": "Fournir un contrôle pour arrêter/pause/masquer les médias audio qui démarrent automatiquement et durent plus de 3 secondes.",
