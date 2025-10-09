@@ -120,6 +120,19 @@
                         "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
                     }
                 ]
+            },
+            {
+                "key": "audio control",
+                "label": "Contrôle des médias audio",
+                "hint": "Fournir un contrôle pour arrêter/pause/masquer les médias audio qui démarrent automatiquement et durent plus de 3 secondes.",
+                "wcag": [
+                    "1.4.2"
+                ],
+                "wcagUrl": {
+                    "1.4.2": "https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html"
+                },
+                "rgaa": "4.10",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#4.10"
             }
         ]
     },
