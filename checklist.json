@@ -276,6 +276,19 @@
                 },
                 "rgaa": "10.3",
                 "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#10.3"
+            },
+            {
+                "key": "Link that can be confused with text",
+                "label": "Lien pouvant être confondu avec du texte",
+                "hint": "Les liens doivent être visuellement distincts du texte environnant (soulignement, icone, etc.).",
+                "wcag": [
+                    "1.4.1"
+                ],
+                "wcagUrl": {
+                    "1.4.1": "https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html"
+                },
+                "rgaa": "10.6",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#10.6"
             }
         ]
     },
