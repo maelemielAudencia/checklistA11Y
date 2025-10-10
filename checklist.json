@@ -288,8 +288,8 @@
             },
             {
                 "key": "label",
-                "label": "Champs de formulaire avec label explicite",
-                "hint": "Chaque champ doit être associé à un label visible et pertinent.",
+                "label": "Champs de formulaire avec label",
+                "hint": "Chaque champ doit être associé à un label visible.",
                 "wcag": [
                     "3.3.2"
                 ],
@@ -304,6 +304,23 @@
                         "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
                     }
                 ]
+            },
+            {
+                "key": "explicit label",
+                "label": "Champs de formulaire avec label explicite (form)",
+                "hint": "Le label doit être explicite et compréhensible (seul ou avec son contexte).",
+                "wcag": [
+                    "2.4.6",
+                    "2.5.3",
+                    "3.3.2"
+                ],
+                "wcagUrl": {
+                    "2.4.6": "https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html",
+                    "2.5.3": "https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html",
+                    "3.3.2": "https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html"
+                },
+                "rgaa": "11.2",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.2"
             }
         ]
     },
