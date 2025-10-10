@@ -394,6 +394,21 @@
                 },
                 "rgaa": "12.8",
                 "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#12.8"
+            },
+            {
+                "key": "No keyboard trap",
+                "label": "Pas de piège au clavier",
+                "hint": "L'utilisateur doit pouvoir naviguer avec la touche Tabubation.",
+                "wcag": [
+                    "2.1.1",
+                    "2.1.2"
+                ],
+                "wcagUrl": {
+                    "2.1.1": "https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html",
+                    "2.1.2": "https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html"
+                },
+                "rgaa": "12.9",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#12.9"
             }
         ]
     },
