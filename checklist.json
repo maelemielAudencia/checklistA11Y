@@ -30,25 +30,6 @@
                 ]
             },
             {
-                "key": "label",
-                "label": "Champs de formulaire avec label explicite",
-                "hint": "Chaque champ doit être associé à un label visible et pertinent.",
-                "wcag": [
-                    "3.3.2"
-                ],
-                "wcagUrl": {
-                    "3.3.2": "https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html"
-                },
-                "rgaa": "11.1",
-                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.1",
-                "tools": [
-                    {
-                        "name": "axe DevTools",
-                        "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
-                    }
-                ]
-            },
-            {
                 "key": "linktext",
                 "label": "Liens avec texte explicite et non vide",
                 "hint": "Chaque lien doit avoir un texte visible et compréhensible.",
@@ -304,6 +285,25 @@
                 },
                 "rgaa": "10.7",
                 "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#10.7"
+            },
+            {
+                "key": "label",
+                "label": "Champs de formulaire avec label explicite",
+                "hint": "Chaque champ doit être associé à un label visible et pertinent.",
+                "wcag": [
+                    "3.3.2"
+                ],
+                "wcagUrl": {
+                    "3.3.2": "https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html"
+                },
+                "rgaa": "11.1",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.1",
+                "tools": [
+                    {
+                        "name": "axe DevTools",
+                        "url": "https://chrome.google.com/webstore/detail/axe-accessibility-linter/"
+                    }
+                ]
             }
         ]
     },
