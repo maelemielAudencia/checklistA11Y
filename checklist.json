@@ -381,6 +381,19 @@
                 },
                 "rgaa": "11.10",
                 "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.10"
+            },
+            {
+                "key": "Tabulation order",
+                "label": "Ordre de tabulation",
+                "hint": "L'ordre de tabulation doit être logique et cohérent.",
+                "wcag": [
+                    "2.4.3"
+                ],
+                "wcagUrl": {
+                    "2.4.3": "https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html"
+                },
+                "rgaa": "12.8",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#12.8"
             }
         ]
     },
