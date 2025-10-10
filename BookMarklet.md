@@ -38,14 +38,6 @@ javascript:(function()%7B%22use%20strict%22%3Bvar%20headingConsoleOutput%3D%22%2
 
 Lists Bookmarklet for Accessibility Testing visually highlights the location and accessibility properties of \<ul>, \<ol>, \<li>, \<dl>, \<dd>, and \<dt> elements. 
 
-### https://accessibility-bookmarklets.org/install.html
-
-![alt text](image-2.png)
-
-```js
-javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/lists.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/lists.js';}})();
-```
-
 ### https://pauljadam.com/bookmarklets/lists.html
 
 ![alt text](image-3.png)
