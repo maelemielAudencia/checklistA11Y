@@ -268,6 +268,19 @@
                 ]
             },
             {
+                "key": "language code",
+                "label": "Code langue",
+                "hint": "Utiliser les codes de langue conformes à la norme ISO 639.",
+                "wcag": [
+                    "3.1.1"
+                ],
+                "wcagUrl": {
+                    "3.1.1": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html"
+                },
+                "rgaa": "8.4",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8.4"
+            },
+            {
                 "key": "title",
                 "label": "Titre de la page",
                 "hint": "Chaque page doit avoir un titre unique et descriptif.",
