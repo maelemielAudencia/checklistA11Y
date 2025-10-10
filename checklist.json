@@ -351,6 +351,21 @@
                 },
                 "rgaa": "11.6",
                 "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.6"
+            },
+            {
+                "key": "relevance of the button in form",
+                "label": "Pertinence du libellé (bouton de formulaire)",
+                "hint": "Le libellé du bouton doit être explicite et compréhensible (seul ou avec son contexte).",
+                "wcag": [
+                    "2.5.3",
+                    "4.1.2"
+                ],
+                "wcagUrl": {
+                    "2.5.3": "https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html",
+                    "4.1.2": "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
+                },
+                "rgaa": "11.9",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#11.9"
             }
         ]
     },
