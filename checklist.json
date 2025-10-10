@@ -261,6 +261,21 @@
                 },
                 "rgaa": "9.1",
                 "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#9.1"
+            },
+            {
+                "key": "Without CSS",
+                "label": "Sans CSS",
+                "hint": "Le contenu doit rester lisible et compréhensible lorsque les styles CSS sont désactivés.",
+                "wcag": [
+                    "1.3.2",
+                    "2.4.3"
+                ],
+                "wcagUrl": {
+                    "1.3.2": "https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html",
+                    "2.4.3": "https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html"
+                },
+                "rgaa": "10.3",
+                "rgaaUrl": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#10.3"
             }
         ]
     },
