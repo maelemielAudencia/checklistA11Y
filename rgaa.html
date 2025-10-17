@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple RGAA Scripts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+
+        button {
+            margin: 1rem 0;
+        }
+
+        #menu ul {
+            display: none;
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        #menu li {
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+        }
+
+        #menu li:focus {
+            outline: 2px solid blue;
+        }
+
+        .indicator {
+            font-weight: bold;
+            color: green;
+            margin-left: 0.5rem;
+        }
+
+        #message,
+        #status {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Exemple RGAA Scripts</h1>
+
+    <!-- 7.1 / 7.5 : Message dynamique -->
+    <div>
+        <button id="showMessage">Afficher un message (7.1 / 7.5)</button>
+        <span class="indicator" id="indicator71">⚪</span>
+        <div id="message" aria-live="polite" role="status"></div>
+    </div>
+
+    <!-- 7.2 : Alternative JS -->
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=nojs.html">
+    </noscript>
+
+    <!-- 7.3 : Menu accessible clavier -->
+    <div id="menu">
+        <p>Menu accessible clavier / souris (7.3) <span class="indicator" id="indicator73">⚪</span></p>
+        <ul>
+            <li tabindex="0" aria-haspopup="true">Menu 1
+                <ul>
+                    <li><a href="#">Option A</a></li>
+                    <li><a href="#">Option B</a></li>
+                </ul>
+            </li>
+            <li tabindex="0" aria-haspopup="true">Menu 2
+                <ul>
+                    <li><a href="#">Option C</a></li>
+                    <li><a href="#">Option D</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 7.4 : Changement de contexte avec avertissement -->
+    <div>
+        <button id="nextPage">Aller à la page suivante (7.4)</button>
+        <span class="indicator" id="indicator74">⚪</span>
+    </div>
+
+    <!-- 7.5 : Notification dynamique -->
+    <div>
+        <button id="notify">Notifier (7.5)</button>
+        <span class="indicator" id="indicator75">⚪</span>
+        <div id="status" role="status" aria-live="polite"></div>
+    </div>
+
+    <script>
+        // 7.1 / 7.5 : Message dynamique
+        document.getElementById('showMessage').addEventListener('click', function () {
+            document.getElementById('message').textContent = 'Message affiché !';
+            document.getElementById('indicator71').textContent = '✅';
+        });
+
+        // 7.3 : Menu clavier / souris
+        document.querySelectorAll('#menu li[tabindex]').forEach(li => {
+            li.addEventListener('click', function () {
+                const submenu = li.querySelector('ul');
+                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                document.getElementById('indicator73').textContent = '✅';
+            });
+            li.addEventListener('keydown', function (e) {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    const submenu = li.querySelector('ul');
+                    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                    document.getElementById('indicator73').textContent = '✅';
+                }
+            });
+        });
+
+        // 7.4 : Changement de contexte
+        document.getElementById('nextPage').addEventListener('click', function () {
+            if (confirm('Voulez-vous vraiment aller à la page suivante ?')) {
+                alert('Ici on simule la redirection vers une autre page.');
+                document.getElementById('indicator74').textContent = '✅';
+                // window.location.href = "page2.html"; // décommenter pour redirection réelle
+            }
+        });
+
+        // 7.5 : Notification dynamique
+        document.getElementById('notify').addEventListener('click', function () {
+            document.getElementById('status').textContent = 'Action réussie !';
+            document.getElementById('indicator75').textContent = '✅';
+        });
+    </script>
+
+</body>
+
+</html>
